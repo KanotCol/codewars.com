@@ -1,0 +1,2 @@
+def count_bits(n):
+    return(len([i for i in "{0:b}".format(n) if i in ['1']]))
