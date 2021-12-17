@@ -1,0 +1,2 @@
+def nb_dig(n, d):
+    return list("".join([str(x ** 2) for x in range(n+1)])).count(str(d))
