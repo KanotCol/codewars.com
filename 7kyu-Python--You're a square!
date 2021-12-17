@@ -1,0 +1,7 @@
+import math
+def is_square(n):
+    if n < 0: return False
+    if n == 0: return True
+    raiz = round(pow(n, 0.5), 2)
+    decimal = abs(raiz) - abs(int(raiz))
+    return False if decimal != 0 else True
