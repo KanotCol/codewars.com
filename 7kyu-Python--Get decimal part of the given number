@@ -1,0 +1,4 @@
+def get_decimal(n): 
+    import math
+    parte_decimal, parte_entera = math.modf(abs(n))
+    return parte_decimal
