@@ -1,0 +1,9 @@
+def dot(n,m):
+    palh, palv, sech, secv = '+---+', '| o |', '---+', ' o |'
+    cad = palh + (sech * (n - 1)) + '\n'
+    for i in range(m):
+        cad += palv + (secv * (n - 1)) + '\n'
+        cad += palh + (sech * (n - 1)) + '\n'
+    cad = cad[0:len(cad) - 1]
+    return cad
+    
