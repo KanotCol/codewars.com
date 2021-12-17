@@ -1,0 +1,29 @@
+def prime_factors(num):
+    i = 2
+    factors = []
+    num = abs(num)
+    while i * i <= num:
+        if num % i:
+            i += 1
+        else:
+            num //= i
+            factors.append(i)
+    if num > 1:
+        factors.append(num)
+    return factors
+
+def sum_for_list(lst):
+    finalLst, lista = [], []
+    for n in range(len(lst)):
+        lista = list(set(lista).union(set(prime_factors(lst[n]))))
+    lista.sort()
+    for p in range(len(lista)):
+        band = False
+        suma = 0
+        for n in range(len(lst)):
+            if lst[n] % lista[p] == 0:
+                suma += lst[n]
+                band = True
+        if suma != 0 or band:
+            finalLst.append([lista[p], suma])    
+    return (finalLst)
