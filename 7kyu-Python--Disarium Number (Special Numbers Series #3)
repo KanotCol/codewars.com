@@ -1,0 +1,3 @@
+def disarium_number(number):
+    lista = [int(y) for y in list(str(number))]
+    return "Disarium !!" if sum([lista[x] ** (x + 1) for x in range(len(lista))]) == number else "Not !!"
