@@ -1,0 +1,4 @@
+def find_outlier(integers):
+    par = [i for i in integers if i % 2 != 0]
+    imp = [i for i in integers if i % 2 == 0]
+    return par[0] if len(par) == 1 else imp[0]
