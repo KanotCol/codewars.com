@@ -1,0 +1,5 @@
+def jumping_number(number):
+    if number <= 9: return "Jumping!!"
+    lista = [int(x) for x in list(str(number))]
+    lista = [abs(lista[x] - lista[x + 1]) for x in range(len(lista) - 1)]
+    return "Jumping!!" if max(lista) == 1 and min(lista) == 1 else "Not!!"
