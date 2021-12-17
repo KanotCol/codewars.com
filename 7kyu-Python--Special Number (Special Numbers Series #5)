@@ -1,0 +1,2 @@
+def special_number(number):
+    return "Special!!" if len([i for i in list(str(number)) if i in '6789']) == 0 else "NOT!!"
