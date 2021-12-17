@@ -1,0 +1,6 @@
+def to_jaden_case(string):
+    final = ""
+    lista = string.split(" ")
+    for i in range(len(lista)):
+        final = final + lista[i].capitalize() + " "
+    return (final.strip())
