@@ -1,0 +1,2 @@
+def round_to_next5(n):
+    return min([x for x in range (n, n + 5) if x % 5 == 0])
