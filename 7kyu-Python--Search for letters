@@ -1,0 +1,5 @@
+def change(st):
+    cadenaBase, definitiva = 'abcdefghijklmnopqrstuvwxyz', ''
+    for x in range(len(cadenaBase)):
+        definitiva += '1' if cadenaBase[x] in st.lower() else '0'
+    return definitiva
