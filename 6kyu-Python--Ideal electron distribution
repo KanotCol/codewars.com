@@ -1,0 +1,13 @@
+def atomic_number(electrons):
+    envoltura = 1
+    lista = []
+    while True:
+        electrones = (2 * (envoltura ** 2))
+        if electrones >= electrons:
+            lista.append(electrons)
+            break
+        else:
+            lista.append(electrones)
+            electrons -= electrones
+            envoltura += 1
+    return lista
