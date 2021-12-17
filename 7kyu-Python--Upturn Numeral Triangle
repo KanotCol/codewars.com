@@ -1,0 +1,18 @@
+def pattern(n): 
+    espacio = ' '
+    can = n
+    num = 1
+    cad = ''
+    for x in range(n):
+        cad += espacio
+        for y in range (can):
+            cad += str(num) + ' '
+        cad = cad[:len(cad) - 1]
+        if x < n - 1:
+            cad += '\n'
+        #print (cad)
+        num += 1
+        if num == 10: num = 0
+        can -= 1
+        espacio += ' '
+    return cad
