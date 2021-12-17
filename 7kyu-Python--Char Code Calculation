@@ -1,0 +1,6 @@
+def calc(cadena):
+    total1 = "".join([str(ord(x)) for x in cadena])
+    total2 = total1.replace("7", "1")
+    total1 = sum([int(x) for x in total1])
+    total2 = sum([int(x) for x in total2])
+    return total1 - total2
