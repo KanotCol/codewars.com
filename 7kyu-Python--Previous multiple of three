@@ -1,0 +1,11 @@
+def prev_mult_of_three(n):
+    band = False
+    while band == False:
+        if n % 3 == 0:
+            band = True
+        else:
+            num = str(n)
+            if len(str(num)) == 1:
+                break
+            n = int(num[:len(num) - 1])
+    return n if band == True else None
