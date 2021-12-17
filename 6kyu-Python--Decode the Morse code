@@ -1,0 +1,8 @@
+def decodeMorse(morse_code):
+    lista = morse_code.strip().replace("   ", " * ").split(" ")
+    for i in range(len(lista)):
+        if lista[i] == "*":
+            lista[i] = " "
+        else:
+            lista[i] = MORSE_CODE[lista[i].replace(" ", "")]
+    return("".join(lista))
