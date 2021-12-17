@@ -1,0 +1,9 @@
+def power_of_two(x):
+    potencia = 0
+    while True:
+        if x == 2 ** potencia:
+            break
+        elif 2 ** potencia > x:
+            break
+        potencia += 1
+    return True if 2 ** potencia == x else False
