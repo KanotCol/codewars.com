@@ -1,0 +1,12 @@
+def namelist(names):
+    if names == []:
+        return ('')
+    else:
+        resultado = ''
+        for i in range(len(names)):
+            resultado = resultado + names[i]['name']
+            if i <= len(names) - 3:
+                resultado += ', '
+            elif i == len(names) - 2:
+                resultado += ' & '
+        return (resultado)
