@@ -1,0 +1,62 @@
+def zero(text = ''):
+    text = '0' + text
+    if len(text) == 3:
+        return int(eval(text))
+    return text
+def one(text = ''):
+    text = '1' + text
+    if len(text) == 3:
+        return int(eval(text))
+    return text
+def two(text = ''):
+    text = '2' + text
+    if len(text) == 3:
+        return int(eval(text))
+    return text
+def three(text = ''):
+    text = '3' + text
+    if len(text) == 3:
+        return int(eval(text))
+    return text
+def four(text = ''):
+    text = '4' + text
+    if len(text) == 3:
+        return int(eval(text))
+    return text
+def five(text = ''):
+    text = '5' + text
+    if len(text) == 3:
+        return int(eval(text))
+    return text
+def six(text = ''):
+    text = '6' + text
+    if len(text) == 3:
+        return int(eval(text))
+    return text
+def seven(text = ''):
+    text = '7' + text
+    if len(text) == 3:
+        return int(eval(text))
+    return text
+def eight(text = ''):
+    text = '8' + text
+    if len(text) == 3:
+        return int(eval(text))
+    return text
+def nine(text = ''):
+    text = '9' + text
+    if len(text) == 3:
+        return int(eval(text))
+    return text
+def plus(text = ''):
+    text = '+' + text
+    return text
+def minus(text = ''):
+    text = '-' + text
+    return text
+def times(text = ''):
+    text = '*' + text
+    return text
+def divided_by(text = ''):
+    text = '/' + text
+    return text
