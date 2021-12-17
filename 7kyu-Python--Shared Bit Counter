@@ -1,0 +1,9 @@
+def shared_bits(a, b):
+    cadA, cadB, cant = str(format(a, "b")), str(format(b, "b")), 0
+    if len(cadA) > len(cadB):
+        cadB = cadB.zfill(len(cadA))
+    else:
+        cadA = cadA.zfill(len(cadB))
+    for i in range(len(cadA)):
+        cant += 1 if cadA[i] == '1' and cadB[i] == '1' else 0
+    return True if cant >= 2 else False
