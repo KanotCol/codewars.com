@@ -1,0 +1,11 @@
+def sort_array(source_array):
+    arr, final, pos = [], [], 0
+    if len(source_array) > 0:
+        arr = sorted([x for x in source_array if x % 2 != 0])
+    for i in source_array:
+        if i % 2 == 0:
+            final.append(i)
+        else:
+            final.append(arr[pos])
+            pos += 1
+    return final
