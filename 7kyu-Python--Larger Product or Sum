@@ -1,0 +1,9 @@
+def sum_or_product(array, n):
+    array.sort()
+    print (array)
+    i, suma, prod, final = 0, 0, 1, len(array) - 1
+    while i < n:
+        prod *= array[i]
+        suma += array[final - i]
+        i += 1
+    return "same" if suma == prod else "product" if prod > suma else "sum"
