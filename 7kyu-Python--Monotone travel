@@ -1,0 +1,11 @@
+def is_monotone(heights):
+    if heights == []: return True
+    ant, band = 0, True
+    for i in range(len(heights)):
+        if i == 0:
+            ant = heights[i]
+        elif heights[i] < ant:
+            band = False
+            break
+    return band
+        
