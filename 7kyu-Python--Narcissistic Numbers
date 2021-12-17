@@ -1,0 +1,2 @@
+def is_narcissistic(i):
+    return True if sum([int(x) ** len(str(i)) for x in str(i)]) == i else False
