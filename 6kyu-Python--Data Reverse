@@ -1,0 +1,7 @@
+def data_reverse(data):
+    x = 0
+    lista = []
+    while x < len(data):
+        lista = data[x:x+8] + lista
+        x += 8
+    return lista
