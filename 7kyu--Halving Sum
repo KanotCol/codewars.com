@@ -1,0 +1,6 @@
+def halving_sum(n): 
+    suma, divisor = n, 2
+    while n // divisor >= 1:
+        suma += n // divisor
+        divisor *= 2
+    return suma
