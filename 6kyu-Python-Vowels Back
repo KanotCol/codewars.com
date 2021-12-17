@@ -1,0 +1,26 @@
+def vowel_back(st):
+    alfabeto, final = 'abcdefghijklmnopqrstuvwxyz', ''
+    for c in st:
+        if c in 'co':
+            pos = alfabeto.find(c)
+            pos1 = pos - 1
+        elif c == 'd':
+            pos = alfabeto.find(c)
+            pos1 = pos - 3
+        elif c == 'e':
+            pos = alfabeto.find(c)
+            pos1 = pos - 4
+        elif c in 'aiu':
+            pos = alfabeto.find(c) 
+            pos1 = pos - 5
+            if pos1 < 0:
+                pos1 = pos1 + 26
+        else:
+            pos = alfabeto.find(c)
+            pos1 = pos + 9
+            if pos1 > 25:
+                pos1 = pos1 - 26
+        if alfabeto[pos1] in 'cdeo':
+            pos1 = pos
+        final += alfabeto[pos1]
+    return final
