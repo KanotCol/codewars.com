@@ -1,0 +1,10 @@
+def cost(mins):
+    if mins <= 5: return 0
+    if mins > 5 and mins <= 65: return 30
+    if mins > 65:
+        suma = 30
+        mins -= 60
+        suma += (mins // 30) * 10
+        mins -= (mins // 30) * 30
+        if mins > 5: suma += 10
+    return suma
