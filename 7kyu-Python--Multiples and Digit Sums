@@ -1,0 +1,2 @@
+def procedure(i):
+    return sum([int(y) for x in range(i, 101, i) for y in list(str(x))])
