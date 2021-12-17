@@ -1,0 +1,5 @@
+def count(string):
+    letras_dic = {}
+    for x in sorted(list(set(list(string)))):
+        letras_dic[x] = string.count(x)
+    return letras_dic
