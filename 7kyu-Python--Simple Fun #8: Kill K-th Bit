@@ -1,0 +1,2 @@
+def kill_kth_bit(n, k):
+    return n if len(format(n, 'b')) < k else int(format(n, 'b')[:len(format(n, 'b')) - k] + '0' + format(n, 'b')[len(format(n, 'b')) - k + 1:], 2)
