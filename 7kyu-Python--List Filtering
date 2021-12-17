@@ -1,0 +1,7 @@
+import re
+def filter_list(l):
+    listadef = []
+    for i in range(len(l)):
+        if(isinstance(l[i], (int))):
+            listadef.append(l[i])
+    return (listadef)
