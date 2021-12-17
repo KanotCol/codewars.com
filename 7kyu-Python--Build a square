@@ -1,0 +1,6 @@
+def generate_shape(n):
+    cad = ""
+    for i in range (n):
+        cad += "+" * n
+        if i < n - 1: cad += "\n"
+    return cad
