@@ -1,0 +1,10 @@
+def is_valid_walk(walk):
+    if len(walk) % 2 != 0 or len(walk) < 10 or len(walk) > 10: return False
+    caminoV = 0
+    caminoH = 0
+    for i in walk:
+        if i == 'n': caminoV += 1
+        elif i == 's': caminoV -= 1
+        elif i == 'e': caminoH += 1
+        else: caminoH -= 1
+    return True if caminoH == 0 and caminoV == 0 else False
