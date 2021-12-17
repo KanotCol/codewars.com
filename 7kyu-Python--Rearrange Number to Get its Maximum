@@ -1,0 +1,2 @@
+def max_redigit(num): 
+    return None if num <= 99 or num > 999 else int("".join(sorted(list(str(num)), reverse=True)))
