@@ -1,0 +1,6 @@
+def find_missing_letter(chars):
+    cadena = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    j = cadena.find(chars[0])
+    for i in range(j, len(chars) + j):
+        if cadena[i] != chars[i - j]:
+            return(cadena[i])
