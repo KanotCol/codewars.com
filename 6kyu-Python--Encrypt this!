@@ -1,0 +1,9 @@
+def encrypt_this(text):
+    if text == "": return ""
+    final = []
+    for i in text.split(' '):
+        if len(i) >= 3: palabra = str(ord(i[0])) + i[len(i) - 1] + i[2:len(i) - 1] + i[1]
+        elif len(i) == 2: palabra = str(ord(i[0])) + i[1]
+        else: palabra = str(ord(i[0]))
+        final.append(palabra)
+    return " ".join(final)
