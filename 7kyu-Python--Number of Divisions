@@ -1,0 +1,7 @@
+def divisions(n, divisor):
+    if divisor > n: return 0
+    cant = 0
+    while n >= divisor:
+        cant += 1
+        n = n / divisor
+    return cant
