@@ -1,0 +1,4 @@
+def automorphic(n):
+    cuadrado = ''.join(reversed(str(n**2)))
+    n = ''.join(reversed(str(n)))
+    return "Automorphic" if cuadrado[:len(n)] == n else "Not!!"
