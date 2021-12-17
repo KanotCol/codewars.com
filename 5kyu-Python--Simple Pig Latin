@@ -1,0 +1,17 @@
+def pig_it(text):
+    output = text.split(' ')
+    final = ''
+    for n in range(len(output)):
+        string = output[n]
+        p, q = '', ''
+        for i in range(len(string)):
+            if i == 0:
+                p = string[i]
+            else:
+                q += string[i]
+        if string != '!' and string != '?':
+            q += p + 'ay'
+        else:
+            q += p
+        final += q + ' '
+    return (final.strip())
