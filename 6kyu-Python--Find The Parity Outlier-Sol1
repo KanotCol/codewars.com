@@ -1,0 +1,12 @@
+def find_outlier(integers):
+    imp = []
+    par = []
+    for n in integers:
+        if n % 2 == 0:
+            par.append(n)
+        else:
+            imp.append(n)
+    if len(par) == 1:
+        return (par[0])
+    else:
+        return (imp[0])
