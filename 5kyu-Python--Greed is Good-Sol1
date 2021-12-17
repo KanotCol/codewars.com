@@ -1,0 +1,20 @@
+def score(dice):
+    principal, cadena, puntaje = "".join([str(_) for _ in dice]), "".join([str(_) for _ in list(set(dice))]), 0
+    for i in range(len(cadena)):
+        if principal.count(cadena[i]) >= 3 and cadena[i] == '1':
+            puntaje += 1000 + ((principal.count(cadena[i]) - 3) * 100)
+        elif principal.count(cadena[i]) == 3 and cadena[i] == '6':
+            puntaje += 600
+        elif principal.count(cadena[i]) >= 3 and cadena[i] == '5':
+            puntaje += 500 + ((principal.count(cadena[i]) - 3) * 50)
+        elif principal.count(cadena[i]) >= 3 and cadena[i] == '4':
+            puntaje += 400
+        elif principal.count(cadena[i]) >= 3 and cadena[i] == '3':
+            puntaje += 300
+        elif principal.count(cadena[i]) >= 3 and cadena[i] == '2':
+            puntaje += 200
+        elif principal.count(cadena[i]) < 3 and cadena[i] == '1':
+            puntaje += (principal.count(cadena[i]) * 100)
+        elif principal.count(cadena[i]) < 3 and cadena[i] == '5':
+            puntaje += (principal.count(cadena[i]) * 50)
+    return (puntaje)
