@@ -1,0 +1,4 @@
+def single_digit(n):
+    num = n if len(str(n)) == 1 else sum([int(x) for x in list(format(n, "b"))])
+    lista = num if len(str(num)) == 1 else single_digit(num)
+    return lista
