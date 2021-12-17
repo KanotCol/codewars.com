@@ -1,0 +1,8 @@
+def divisors(n):
+    mitad, cantidad, i = (n // 2), 0, 1
+    while i <= mitad:
+        div = n // i
+        if div * i == n:
+            cantidad += 1
+        i += 1
+    return (cantidad + 1)
