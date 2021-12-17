@@ -1,0 +1,2 @@
+def to_float_array(arr): 
+    return [int(x) if not '.' in x else float(x) for x in arr]
