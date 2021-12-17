@@ -1,0 +1,15 @@
+def valid_parentheses(string):
+    cant1, cant2, ub1, ub2 = 0, 0, 0, 0
+    lista = list(string)
+    for i in range(len(lista)):
+        if lista[i] == '(':
+            cant1 += 1
+            ub1 += 1
+            if ub1 != 0 and ub1 <= ub2:
+                return False
+        elif lista[i] == ')':
+            cant2 += 1
+            ub2 += 1
+            if ub2 != 0 and ub2 > ub1:
+                return False
+    return True if ub1 == ub2 else False
