@@ -1,0 +1,16 @@
+def dbl_linear(n):
+    lista = [1]
+    a, b = 0, 0
+    while len(lista) <= n:
+        y, z = ((2 * lista[a]) + 1), ((3 * lista[b]) + 1)
+        if y > z:
+            lista.append(z)
+            b += 1
+        elif y < z:
+            lista.append(y)
+            a += 1
+        else:
+            lista.append(y)
+            a += 1
+            b += 1
+    return lista[n]
