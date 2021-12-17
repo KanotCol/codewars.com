@@ -1,0 +1,25 @@
+def obtenetClave (coordenadas, valor):
+    listKey = list(coordenadas.keys())
+    listValue = list(coordenadas.values())
+    position = listValue.index(valor)
+    return listKey[position]
+
+def direction(facing, turn):
+    print (facing, turn)
+    coordenadas = {'N': 0, 'NE': 45, 'E': 90, 'SE': 135, 'S': 180, 'SW': 225, 'W': 270, 'NW': 315}
+    tmp = coordenadas[facing]
+    print (tmp)
+    if turn > 0:
+        if tmp == 360: tmp = 0
+        while turn > 0:
+            tmp += 45
+            turn -= 45
+            if tmp == 360: tmp = 0
+    else:
+        if tmp == 0: tmp = 360
+        while turn < 0:
+            tmp -= 45
+            turn += 45
+            if tmp == 0: tmp = 360
+    if tmp == 360: tmp = 0
+    return obtenetClave(coordenadas, tmp)
