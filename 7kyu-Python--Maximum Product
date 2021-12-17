@@ -1,0 +1,8 @@
+def adjacent_element_product(array):
+    mxm = 0
+    for i in range(len(array) - 1):
+        if i == 0:
+            mxm = array[i] * array[i + 1]
+        else:
+            mxm = mxm if (array[i] * array[i + 1]) < mxm else (array[i] * array[i + 1])
+    return mxm
