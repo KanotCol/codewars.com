@@ -1,0 +1,13 @@
+def to_underscore(string):
+    mayus = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    string = list(str(string))
+    final = ''
+    for x in range(0, len(string)):
+        if string[x] in mayus:
+            if x == 0:
+                final += string[x].lower()
+            else:
+                final += '_' + string[x].lower()
+        else:
+            final += string[x]
+    return final
