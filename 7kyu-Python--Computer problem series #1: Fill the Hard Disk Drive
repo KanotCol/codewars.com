@@ -1,0 +1,8 @@
+def save(sizes, hd): 
+    cant, suma = 0, 0
+    for x in sizes:
+        if suma + x > hd:
+            return cant
+        suma += x
+        cant += 1
+    return cant
