@@ -1,0 +1,8 @@
+import functools
+def grid_index(grid, indexes):
+    lista = functools.reduce(lambda x,y: x.extend(y) or x, grid)
+    indexes = [x - 1 for x in indexes]
+    palabra = ''
+    for i in indexes:
+        palabra += lista[i]
+    return palabra
