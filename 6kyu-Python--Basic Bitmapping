@@ -1,0 +1,4 @@
+def to_bits(string):
+    lista = [int(x) for x in string.split('\n')]
+    res = [1 if i in lista else 0 for i in range(0, 5000)]
+    return res
