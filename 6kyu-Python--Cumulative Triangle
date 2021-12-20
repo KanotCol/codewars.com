@@ -1,0 +1,12 @@
+def cumulative_triangle(n):
+    lista = [1]
+    for i in range(2, n + 1):
+        lista.append(i + lista[i - 2])
+    suma = lista[len(lista) - 1]
+    n -=1
+    valor = lista[len(lista) - 1]
+    while n > 0:
+        valor -= 1
+        suma += valor
+        n -= 1
+    return suma
