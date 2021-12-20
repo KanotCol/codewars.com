@@ -1,0 +1,2 @@
+def double_every_other(lst):
+    return [lst[x] if x % 2 == 0 else lst[x] * 2 for x in range(0, len(lst))]
