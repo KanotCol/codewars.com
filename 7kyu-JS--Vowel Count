@@ -1,4 +1,10 @@
-function getCount(str) {
-  const count = str.match(/[aeiou]/g).length;
-  return count;
+function getCount(cadena) {
+  const vowels = ["a", "e", "i", "o", "u"]
+  let cont = 0
+  for (let letra of cadena.toLowerCase()){
+    if (vowels.includes(letra)){
+      cont ++
+    }
+  }
+  return cont
 }
