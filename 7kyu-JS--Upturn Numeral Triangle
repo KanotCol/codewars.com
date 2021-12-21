@@ -1,0 +1,23 @@
+function pattern(n){
+  let espacio = ' '
+  let can = n
+  let num = 1
+  let cad = ''
+  for (let i = 1; i <= n; i++) {
+    cad += espacio
+    for (let j = 1; j <= can; j++) {
+      cad = cad + String(num) + ' '
+    }
+    cad = cad.substring(0, cad.length - 1)
+    if (i < n) {
+      cad += '\n'
+    }
+    num += 1
+    if (num === 10){
+      num = 0
+    }
+    can -= 1
+    espacio += ' '
+  }
+  return cad;
+}
