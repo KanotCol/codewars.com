@@ -1,0 +1,16 @@
+function lastDigit(elementos, d) {
+  let cad = String(elementos)
+  let total = cad.length - 1
+  if (d > total + 1) {
+    d = total + 1
+  }
+  let lista = []
+  if (d <= 0) {
+    return []
+  } else {
+    for (let i = total; i > total - d; i--) {
+      lista.unshift(parseInt(cad[i], 10))
+    }
+  }
+  return lista
+}
