@@ -1,0 +1,14 @@
+var isSquare = function(n){
+  if (n < 0) {
+    return false
+  }
+  if (n == 0) {
+    return true
+  }
+  let raiz = Math.pow(n, 0.5)
+  if (Math.abs(raiz) - Math.floor(raiz) != 0) {
+    return false
+  } else {
+    return true
+  }
+}
