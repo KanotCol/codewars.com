@@ -1,0 +1,4 @@
+function getCount(str) {
+  const count = str.match(/[aeiou]/g).length;
+  return count;
+}
