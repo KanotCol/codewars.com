@@ -1,0 +1,16 @@
+function sumar_array(array_numeros){
+  var suma = 0;
+    array_numeros.forEach (function(numero){
+      suma += numero;
+    });
+  return suma;
+}
+
+function uniqueSum(lst){
+  if (lst.length === 0) {
+    return null
+  } else {
+    let unique = [...new Set(lst)];
+    return sumar_array(unique)
+  }
+}
