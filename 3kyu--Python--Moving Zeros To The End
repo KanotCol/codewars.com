@@ -1,0 +1,7 @@
+def move_zeros(lst):
+    l1 = []
+    l2 = []
+    for n in lst:
+        l1.append(n) if n != 0 else l2.append(n)
+    lst = l1 + l2
+    return lst
